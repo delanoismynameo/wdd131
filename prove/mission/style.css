@@ -1,0 +1,43 @@
+body {
+    background-color: white;
+    font-size: 20px;
+}
+#content {
+    max-width: 60%;
+    border: 1px solid darkgray;
+    margin: 40px auto;
+    padding: 50px;
+}
+#uniqueP {
+    color: #035f9c;
+    font-size: 1em;
+}
+#italics {
+    font-style: italic;
+}
+hr {
+    height: .0001px;
+    background-color: #035f9c;
+    width: 55%;
+    margin-bottom: 50px;
+}
+h1 {
+    font-size:3em;
+    margin-bottom: 15px;
+}
+#header {
+    text-align: center;
+}
+img {
+    width: 15%;
+    display: block;
+    margin: 50px auto;
+}
+#topics {
+    line-height: 1.5em;
+    margin: 0 auto;
+    width: 55%;
+}
+.list {
+    list-style-type: decimal;
+}
