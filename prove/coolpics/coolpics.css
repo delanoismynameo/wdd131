@@ -8,13 +8,18 @@ body {
   background-color: rgb(199, 199, 199);
 }
 header,
-main,
-footer {
+main {
   margin: 0 auto;
   padding: 1rem;
 }
 header, footer {
     background-color: rgb(18, 117, 150);
+}
+footer {
+    padding: 1rem;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    color: white;
 }
 main {
     display: grid;
@@ -60,9 +65,6 @@ nav a:hover {
 }
 .menu-btn p {
     margin: 0;
-}
-footer {
-    text-align: center;
 }
   
 @media screen and (min-width: 700px) {
