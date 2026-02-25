@@ -1,0 +1,148 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#creditForm {
+    position: relative;
+    width: 550px;
+    height: 450px;
+}
+
+/* Common Card Styles */
+#cardNumber, #cardHolder, #cardExpiration, #cardCvc, p {
+    position: absolute;
+    z-index: 2;
+}
+
+/* The Front Card (Container-ish) */
+#creditForm::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 280px;
+    background: #cccccc;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+/* The Back Card */
+#cardCvc {
+    position: absolute;
+    left: 110px;
+    top: 150px;
+    width: 450px;
+    height: 280px;
+    background: #bcbcbc; /* Slightly darker to stand out */
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    z-index: 0;
+}
+
+/* Positioning Elements */
+p:first-of-type { /* Total */
+    top: 40px;
+    left: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p:nth-of-type(2) { /* Emoji/Logo */
+    top: 40px;
+    left: 370px;
+    font-size: 2rem;
+}
+
+#cardNumber { top: 100px; left: 25px; }
+#cardHolder { top: 190px; left: 25px; }
+#cardExpiration { top: 190px; left: 300px; }
+
+/* The CVC is on the back card */
+#cardCvc label {
+    display: block;
+    margin-top: 170px; /* Push it down below the black stripe */
+    margin-left: 30px;
+}
+#cardCvc input { margin-left: 30px; width: 80px; }
+
+/* The Black Stripe on the back card */
+#cardCvc::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: black;
+}
+
+/* Input & Label Styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+#cNumber { width: 350px; }
+#cHolder { width: 250px; }
+#month, #year { width: 40px; text-align: center; }
+
+/* Submit Button */
+button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background: #eeeeee;
+    border: 2px solid black;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background: #ddd;
+}
+
+.errors {
+    color: red;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+/* When the form is successful, hide the card backgrounds */
+#creditForm.success-mode::before, 
+#creditForm.success-mode #cardCvc {
+    display: none;
+}
+
+#creditForm.success-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust as needed */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+#creditForm.success-mode h2 {
+    color: #2e7d32; /* A nice success green */
+    text-align: center;
+}
