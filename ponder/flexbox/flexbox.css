@@ -41,8 +41,8 @@ hr{
     justify-content: center;
 }
 
-.gallery section {
-    flex:0 1 460px;
+.gallery > * {
+    flex:1 1 460px;
 }
 
 @media screen and (min-width:700px) {
@@ -55,9 +55,9 @@ hr{
     .media-card {
         flex-direction: row;
     }
-    .gallery section {
+    /* .gallery section {
         flex:0 1 460px;
-    }
+    } */
     .media-card-image {
         flex: 0 1 200px;
     }
