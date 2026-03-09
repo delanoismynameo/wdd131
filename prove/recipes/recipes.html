@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Recipe Book - Apple Crisp">
+    <meta property="og:description" content="A delicious and easy-to-make apple crisp recipe.">
+    <meta property="og:url" content="https://delanoismynameo.github.io/wdd131/prove/recipes/recipes.html">
+    <meta property="og:image" content="images/social-preview-image.png">
+
+    <!-- X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recipe Book - Apple Crisp">
+    <meta name="twitter:description" content="A delicious and easy-to-make apple crisp recipe.">
+    <meta name="twitter:image" content="favicon.ico">
+
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="favicon.ico">
+
+    <!-- Amatic SC Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/recipe-book.png" alt="Recipe Book Logo">
+            <h1>Recipe Book</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search recipes...">
+            <img src="images/search.svg" alt="Search">
+        </div>
+    </header>
+
+    <main>
+        <article class="recipe-card">
+            <img class="recipe-image" src="images/apple-crisp.jpg" alt="Delicious Apple Crisp">
+            
+            <div class="recipe-info">
+                <h2>Apple Crisp</h2>
+                
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+
+                <!-- Hide on mobile, show on desktop -->
+                <p class="recipe-description">
+                    This classic Apple Crisp is the perfect fall dessert! It features tender, warmly spiced baked apples topped with a buttery, crispy oat streusel. Serve it warm with a generous scoop of vanilla ice cream for the ultimate comfort food experience.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <!-- Social Media Icons (replace with your local image paths) -->
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div> 
+
+        <!-- Required Flaticon Attribution -->
+        <div class="attribution">
+            <a href="https://linktr.ee/delanoismynameo?utm_source=ig&utm_medium=social&utm_content=link_in_bio" title="recipe icons">Delano Stewart Jr</a>
+        </div>
+    </footer>
+
+</body>
+</html>
